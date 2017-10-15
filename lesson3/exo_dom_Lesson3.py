@@ -1,12 +1,12 @@
-
-# coding: utf-8
+"""high level support for doing this and that."""
+# coding: utf8
 
 # In[23]:
 
 import requests
 import requests
 import pandas as pd
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoupfrom bs4
 import time
 
 
@@ -41,7 +41,8 @@ def getListofUsers(url):
 
 
 def getMeanStarsUser(user):
-    url = 'https://api.github.com/search/repositories?q=user:' + user + '&sort=stars'
+    url = 'https://api.github.com/search/repositories?q=user:'
+    + user + '&sort=stars'
     content = requests.get(url)
     data = content.json()
     try:
